@@ -2,6 +2,21 @@
 <html lang="en">
 <head>
     <x-head/>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex: 1;
+        }
+        .footer {
+            background-color: #yourNavBackgroundColor; /* vervang met de juiste kleur */
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -27,20 +42,18 @@
 
             <ul class="breadcrumb">
                 <li>
-					<a href="/" title="{{ __('misc.home_alt') }}" alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a>
-				</li>
+                    <a href="/" title="{{ __('misc.home_alt') }}" alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a>
+                </li>
                 {{ $breadcrumb ?? '' }}
             </ul>
 
         </div>
 
-        <div class="row">
-            <x-footer/>
-        </div>
-
     </div>
+</div>
 
-
+<div class="footer">
+    <x-footer/>
 </div>
 
 <!-- Bootstrap core JavaScript
